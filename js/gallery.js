@@ -1,13 +1,16 @@
-import element from './gallery-items'
+"use strict";
+
+import images from './gallery-items.js';
 
 const paletteImages = document.querySelector('js-gallery');
-const imagesMarkup = createGalleryElements(element);
+const imagesMarkup = createGalleryElements(images);
+
 paletteImages.insertAdjacentHTML('beforeend', imagesMarkup);
 
-function createGalleryElements(element) {
-    return element.map(({ preview, original, description }) => {
-        return
-        `<li class="gallery__item">
+function createGalleryElements(item) {
+    return item
+    .map(({ preview, original, description }) => {
+        return `<li class="gallery__item">
         <a
           class="gallery__link"
           href="${original}"
@@ -20,7 +23,10 @@ function createGalleryElements(element) {
           />
         </a>
       </li>`;
-    }).join('');
+    })
+  .join('');
 }
 
-console.log(createGalleryElements(element));
+console.log(createGalleryElements(item));
+
+
