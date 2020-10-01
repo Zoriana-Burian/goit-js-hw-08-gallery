@@ -2,7 +2,8 @@
 
 import images from './gallery-items.js';
 
-const paletteImages = document.querySelector('js-gallery');
+
+const paletteImages = document.querySelector('.js-gallery');
 const imagesMarkup = createGalleryElements(images);
 
 paletteImages.insertAdjacentHTML('beforeend', imagesMarkup);
@@ -27,6 +28,6 @@ function createGalleryElements(item) {
   .join('');
 }
 
-console.log(createGalleryElements(item));
+
 
 
