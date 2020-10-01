@@ -36,7 +36,7 @@ function createGalleryElements(item) {
 
 refs.gallery.addEventListener('click', onGalleryClick);
 refs.closeBtn.addEventListener('click', onCloseModalClickBtn);
-refs.lightboxOverlay.addEventListener('click', OnCloseModalClick);
+refs.lightboxOverlay.addEventListener('click', onCloseModalOnClick);
 
 
 function onGalleryClick(evt) {
@@ -73,7 +73,7 @@ function onCloseModalEscKey(evt) {
   
 }
 
-function OnCloseModalClick(evt){
+function onCloseModalOnClick(evt){
   if(evt.target === evt.currentTarget){
     onCloseModalClickBtn();
 
